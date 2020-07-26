@@ -1,3 +1,5 @@
+package JavaJava.CenteredHexagonalNumber.gitHub.two;
+
 import java.util.Scanner;
 
 public class Challenge {
@@ -15,6 +17,7 @@ public class Challenge {
 
   public static String check_andIfPossibleCreate_centeredHexagonLattice(int integerToCheck) {
     if (isCenteredHexagonLattice(integerToCheck)) {
+      // returns a string image of the centered haxagon number.
       return create_centeredHexagonLattice();
     }
     return "Invalid";
