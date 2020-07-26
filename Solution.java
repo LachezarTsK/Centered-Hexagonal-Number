@@ -15,7 +15,7 @@ public class Challenge {
 
   public static String check_andIfPossibleCreate_centeredHexagonLattice(int integerToCheck) {
     if (isCenteredHexagonLattice(integerToCheck)) {
-      return create_hexagonLattice();
+      return create_centeredHexagonLattice();
     }
     return "Invalid";
   }
@@ -30,7 +30,7 @@ public class Challenge {
     return current == integerToCheck;
   }
 
-  public static String create_hexagonLattice() {
+  public static String create_centeredHexagonLattice() {
 
     int totalRows = 2 * total_hexagonLattices - 1;
 
