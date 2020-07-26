@@ -1,5 +1,3 @@
-package JavaJava.CenteredHexagonalNumber.gitHub.two;
-
 import java.util.Scanner;
 
 public class Challenge {
@@ -42,8 +40,7 @@ public class Challenge {
     */
     int totalColumns = 4 * total_hexagonLattices - 1;
 
-    // Capacity includes one char for new line below the hexagon lattice that is subsequently
-    // deleted.
+    // Capacity includes one char for new line below the hexagon lattice that is subsequently deleted.
     StringBuilder hexagonLattice = new StringBuilder(totalColumns * totalRows + 1);
 
     // UPPER HALF, MIDDLE ROW INCLUSIVE.
