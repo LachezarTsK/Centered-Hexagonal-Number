@@ -1,5 +1,3 @@
-package JavaJava.CenteredHexagonalNumber.gitHub.two;
-
 import java.util.Scanner;
 
 public class Challenge {
@@ -43,24 +41,20 @@ public class Challenge {
     */
     int totalColumns = 4 * total_centeredHexagonLattices - 1;
 
-    // Capacity includes one char for new line below the hexagon lattice that is subsequently
-    // deleted.
+    // Capacity includes one char for new line below the hexagon lattice that is subsequently deleted.
     StringBuilder centeredHexagonLattice = new StringBuilder(totalColumns * totalRows + 1);
 
     // UPPER HALF, MIDDLE ROW INCLUSIVE.
     for (int rows = 0; rows <= (2 * total_centeredHexagonLattices - 1) / 2; rows++) {
 
       // Upper Left (spaces).
-      append_centeredHexagonLatticeSpaces(
-          total_centeredHexagonLattices - rows, centeredHexagonLattice);
+      append_centeredHexagonLatticeSpaces(total_centeredHexagonLattices - rows, centeredHexagonLattice);
 
       // Upper Center (points).
-      append_centeredHexagonLatticePoints_separatedBySpace(
-          total_centeredHexagonLattices + rows, centeredHexagonLattice);
+      append_centeredHexagonLatticePoints_separatedBySpace(total_centeredHexagonLattices + rows, centeredHexagonLattice);
 
       // Upper Right (spaces).
-      append_centeredHexagonLatticeSpaces(
-          total_centeredHexagonLattices - rows, centeredHexagonLattice);
+      append_centeredHexagonLatticeSpaces(total_centeredHexagonLattices - rows, centeredHexagonLattice);
 
       centeredHexagonLattice.append("\n");
     }
@@ -69,16 +63,13 @@ public class Challenge {
     for (int rows = (2 * total_centeredHexagonLattices) / 2 - 1; rows > 0; rows--) {
 
       // Lower Left (spaces).
-      append_centeredHexagonLatticeSpaces(
-          total_centeredHexagonLattices - rows + 1, centeredHexagonLattice);
+      append_centeredHexagonLatticeSpaces(total_centeredHexagonLattices - rows + 1, centeredHexagonLattice);
 
       // Lower Center (points).
-      append_centeredHexagonLatticePoints_separatedBySpace(
-          total_centeredHexagonLattices + rows - 1, centeredHexagonLattice);
+      append_centeredHexagonLatticePoints_separatedBySpace(total_centeredHexagonLattices + rows - 1, centeredHexagonLattice);
 
       // Lower Right (spaces).
-      append_centeredHexagonLatticeSpaces(
-          total_centeredHexagonLattices - rows + 1, centeredHexagonLattice);
+      append_centeredHexagonLatticeSpaces(total_centeredHexagonLattices - rows + 1, centeredHexagonLattice);
 
       centeredHexagonLattice.append("\n");
     }
@@ -89,15 +80,13 @@ public class Challenge {
     return centeredHexagonLattice.toString();
   }
 
-  private static void append_centeredHexagonLatticeSpaces(
-      int end, StringBuilder centeredHexagonLattice) {
+  private static void append_centeredHexagonLatticeSpaces(int end, StringBuilder centeredHexagonLattice) {
     for (int columns = 0; columns < end; columns++) {
       centeredHexagonLattice.append(" ");
     }
   }
 
-  private static void append_centeredHexagonLatticePoints_separatedBySpace(
-      int end, StringBuilder centeredHexagonLattice) {
+  private static void append_centeredHexagonLatticePoints_separatedBySpace(int end, StringBuilder centeredHexagonLattice) {
     for (int columns = 0; columns < end - 1; columns++) {
       centeredHexagonLattice.append("o ");
     }
