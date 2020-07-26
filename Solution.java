@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Solution {
 
-  public static int total_centeredHexagonLattices;
+  private static int total_centeredHexagonLattices;
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
@@ -13,7 +13,7 @@ public class Solution {
     System.out.println(result);
   }
 
-  public static String check_andIfPossibleCreate_centeredHexagonLattice(int integerToCheck) {
+  private static String check_andIfPossibleCreate_centeredHexagonLattice(int integerToCheck) {
     if (isCenteredHexagonLattice(integerToCheck)) {
       // returns a string image of the centered haxagon number.
       return create_centeredHexagonLattice();
@@ -21,7 +21,7 @@ public class Solution {
     return "Invalid";
   }
 
-  public static boolean isCenteredHexagonLattice(int integerToCheck) {
+  private static boolean isCenteredHexagonLattice(int integerToCheck) {
     total_centeredHexagonLattices = 0;
     int current = 0;
     while (current < integerToCheck) {
@@ -31,7 +31,7 @@ public class Solution {
     return current == integerToCheck;
   }
 
-  public static String create_centeredHexagonLattice() {
+  private static String create_centeredHexagonLattice() {
 
     int totalRows = 2 * total_centeredHexagonLattices - 1;
 
