@@ -37,11 +37,14 @@ public class Challenge {
 
     /*
      Includes columns with a space between the columns with points, as well as one column with a space
-     to the left and to right of the hexagon lattice, as required by the problem statement.
+     to the left and to the right of the hexagon lattice, as required by the problem statement.
     */
     int totalColumns = 4 * total_centeredHexagonLattices - 1;
 
-    // Capacity includes one char for new line below the hexagon lattice that is subsequently deleted.
+    /*
+     The capacity of StringBuilder includes one char for a new line below the hexagon lattice 
+     that is subsequently deleted, in order to comply with the problem statement.
+    */
     StringBuilder centeredHexagonLattice = new StringBuilder(totalColumns * totalRows + 1);
 
     // UPPER HALF, MIDDLE ROW INCLUSIVE.
