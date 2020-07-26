@@ -15,7 +15,7 @@ public class Solution {
 
   private static String check_andIfPossibleCreate_centeredHexagonLattice(int integerToCheck) {
     if (isCenteredHexagonLattice(integerToCheck)) {
-      // returns a string image of the centered haxagon number.
+      // returns a string image of the centered haxagon lattice number.
       return create_centeredHexagonLattice();
     }
     return "Invalid";
