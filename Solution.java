@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Challenge {
+public class Solution {
 
   public static int total_centeredHexagonLattices;
 
