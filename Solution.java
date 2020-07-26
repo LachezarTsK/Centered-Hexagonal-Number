@@ -1,4 +1,4 @@
-
+package JavaJava.CenteredHexagonalNumber.gitHub.two;
 
 import java.util.Scanner;
 
