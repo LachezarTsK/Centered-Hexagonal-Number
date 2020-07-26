@@ -48,14 +48,16 @@ public class Challenge {
     for (int rows = 0; rows <= (2 * total_centeredHexagonLattices - 1) / 2; rows++) {
 
       // Upper Left (spaces).
-      append_hexagonLatticeSpaces(total_centeredHexagonLattices - rows, centeredHexagonLattice);
+      append_centeredHexagonLatticeSpaces(
+          total_centeredHexagonLattices - rows, centeredHexagonLattice);
 
       // Upper Center (points).
-      append_hexagonLatticePoints_separatedBySpace(
+      append_centeredHexagonLatticePoints_separatedBySpace(
           total_centeredHexagonLattices + rows, centeredHexagonLattice);
 
       // Upper Right (spaces).
-      append_hexagonLatticeSpaces(total_centeredHexagonLattices - rows, centeredHexagonLattice);
+      append_centeredHexagonLatticeSpaces(
+          total_centeredHexagonLattices - rows, centeredHexagonLattice);
 
       centeredHexagonLattice.append("\n");
     }
@@ -64,14 +66,16 @@ public class Challenge {
     for (int rows = (2 * total_centeredHexagonLattices) / 2 - 1; rows > 0; rows--) {
 
       // Lower Left (spaces).
-      append_hexagonLatticeSpaces(total_centeredHexagonLattices - rows + 1, centeredHexagonLattice);
+      append_centeredHexagonLatticeSpaces(
+          total_centeredHexagonLattices - rows + 1, centeredHexagonLattice);
 
       // Lower Center (points).
-      append_hexagonLatticePoints_separatedBySpace(
+      append_centeredHexagonLatticePoints_separatedBySpace(
           total_centeredHexagonLattices + rows - 1, centeredHexagonLattice);
 
       // Lower Right (spaces).
-      append_hexagonLatticeSpaces(total_centeredHexagonLattices - rows + 1, centeredHexagonLattice);
+      append_centeredHexagonLatticeSpaces(
+          total_centeredHexagonLattices - rows + 1, centeredHexagonLattice);
 
       centeredHexagonLattice.append("\n");
     }
@@ -82,13 +86,14 @@ public class Challenge {
     return centeredHexagonLattice.toString();
   }
 
-  private static void append_hexagonLatticeSpaces(int end, StringBuilder centeredHexagonLattice) {
+  private static void append_centeredHexagonLatticeSpaces(
+      int end, StringBuilder centeredHexagonLattice) {
     for (int columns = 0; columns < end; columns++) {
       centeredHexagonLattice.append(" ");
     }
   }
 
-  private static void append_hexagonLatticePoints_separatedBySpace(
+  private static void append_centeredHexagonLatticePoints_separatedBySpace(
       int end, StringBuilder centeredHexagonLattice) {
     for (int columns = 0; columns < end - 1; columns++) {
       centeredHexagonLattice.append("o ");
