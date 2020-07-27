@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Solution {
 
+  // All integers that could form a centered hexagon lattice from 0 to integerToCheck (inclusive range).
   private static int total_centeredHexagonLattices;
 
   public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class Solution {
 
   private static String check_andIfPossibleCreate_centeredHexagonLattice(int integerToCheck) {
     if (isCenteredHexagonLattice(integerToCheck)) {
-      // returns a string image of the centered haxagon lattice number.
+      // Returns a string image of the centered haxagon lattice number.
       return create_centeredHexagonLattice();
     }
     return "Invalid";
